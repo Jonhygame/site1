@@ -79,12 +79,11 @@
 <script type="text/javascript" src="{{ asset('assets/packages/owl-carousel/owl-carousel.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/packages/cloudzoom/cloudzoom.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/packages/thumbelina/thumbelina.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/packages/bootstrap-touchspin/bootstrap-touchspin.js') }}">
-</script>
+<script type="text/javascript" src="{{ asset('assets/packages/bootstrap-touchspin/bootstrap-touchspin.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
+<script type="text/javascript" src="{{asset('assets/js/script.js') }}"></script>-->
 </body>
 
 </html>
