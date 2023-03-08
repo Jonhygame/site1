@@ -1,5 +1,7 @@
 @extends('layouts.main')
-@section('content')
+@section('head_meta')
+<meta name="csrf_token" content="{{ csrf_token() }}" />
+@endsection
 <div id="page-content" class="page-content">
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-header.jpg');">
@@ -63,7 +65,7 @@
                         <div class="col-lg-12">
                             <div class="contact-wrapper">
                                 <h3 class="title font-weight-normal mt-0 text-left">Send Us a Comment for this Product</h3>
-                                <form data-aos="fade-left" data-aos-duration="1200" method="POST" action="{{route('commentsbd')}}">
+                                <form data-aos="fade-left" data-aos-duration="1200" method="POST" action="{{route('contact')}}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-6">

@@ -35,22 +35,24 @@ class contactcontroller extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->isMethod('post')) {
-            $request->validate([
-                'fullname' => 'required',
-                'email' => 'required|email|max:50',
-                'message' => 'required',
-            ], [
-                'fullname.required' => 'Proporciona nombre completo.',
-                'email.max' => 'Email con máximo 50 caracteres.',
-                'message.required' => 'Favor de escribir el mensaje.',
+        if ($request->isMethod('post'))
+        {
+            /*$validator = Validator::make($request->all(), [
+                'fullname'   => 'required|max:50',
+                'email'   => 'required|email|max:50',
+                'message' => 'required|max:500',
             ]);
+           
+            if ($validator->fails()) {
+                return response()->json($validator->messages()->toArray(), 400);
+            }*/
+   
             $contact = new Contact();
             $contact->fullname = $request->input('fullname');
             $contact->email = $request->input('email');
             $contact->message = $request->input('message');
             $contact->save();
-            return redirect()->route('contact.index')->with('success', 'You message has been sent.');
+            return response()->json([   "message"=>"Contact message sent successfully."]);
         }
     }
 

@@ -22,7 +22,7 @@ Route::get('/', function () {
 */
 
 Route::get('/',[sitecontroller::class,'landingpage'])->name('index');
-Route::resource('contact', contactcontroller::class);
+Route::resource('/contact', contactcontroller::class);
 Route::post('/comments', [productcontroller::class,'commentsbd'])->name('commentsbd');
 Route::get('/about',[sitecontroller::class,'aboutpage'])->name('about');
 Route::get('/faq',[sitecontroller::class,'faqpage'])->name('faq');
